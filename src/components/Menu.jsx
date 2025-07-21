@@ -27,7 +27,25 @@ function Menu() {
         gsap.fromTo(".cocktail img", { opacity: 0, xPercent: -100 }, { opacity: 1, xPercent: 0, duration: 1, ease: "power1.inOut" });
         
         gsap.fromTo(".details h2, .details p", { yPercent: 100, opacity: 0 }, { yPercent: 0, opacity: 1, ease: "power1.inOut"})
-    }, [currentIndex])
+    }, [currentIndex]);
+
+    useGSAP(() => {
+        const leafTimeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#menu",
+                start: "top center",
+                scrub: true
+            }
+        });
+
+        leafTimeline.to("#m-left-leaf", {
+            y: -500,
+            ease: "power1.inOut"
+        }).to("#m-right-leaf", {
+            y: 600,
+            ease: "power1.inOut"
+        }, "<");
+    }, [])
     return (
         <section id="menu">
             <img src="/images/slider-left-leaf.png" alt="left-leaf" id='m-left-leaf' />

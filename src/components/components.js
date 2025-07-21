@@ -4,6 +4,7 @@ import Cocktails from "./Cocktails";
 import About from "./About";
 import Art from "./Art";
 import Menu from "./Menu";
+import Contact from "./Contact";
 
 export {
     Navbar,
@@ -11,5 +12,6 @@ export {
     Cocktails,
     About,
     Art,
-    Menu
+    Menu,
+    Contact
 }
