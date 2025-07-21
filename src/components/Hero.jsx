@@ -12,7 +12,7 @@ function Hero() {
 
     useGSAP(() => {
         document.fonts.ready.then(() => {
-            const heroSplit = new SplitText('.title', { type: 'chars, words' });   //splitting word in characters
+            const heroSplit = new SplitText('.title', { type: 'chars' });   //splitting word in characters
             const paragraphSplit = new SplitText('.subtitle', { type: 'lines' });   //splitting para in lines
 
             //applying gradient to each character (we got an array of character after splitting it)
@@ -46,7 +46,7 @@ function Hero() {
             .to('.left-leaf', { y: -200 }, 0);
 
         const startValue = isMobile ? 'top 50%' : "center 60%";
-        const endValue = isMobile ? "120%  top" : "bottom top";
+        const endValue = isMobile ? "204.5%  top" : "bottom top";
 
         const tl = gsap.timeline({
             scrollTrigger: {
